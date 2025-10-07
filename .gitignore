@@ -1,0 +1,91 @@
+# ======================
+# Node modules
+# ======================
+node_modules/
+
+# ======================
+# Build / output
+# ======================
+dist/
+build/
+.vite/
+*.local
+
+# ======================
+# Cache / temp files
+# ======================
+.cache/
+*.tmp
+*.temp
+npm-debug.log*
+yarn-debug.log*
+pnpm-debug.log*
+
+# ======================
+# Environment / secrets
+# ======================
+.env
+.env.local
+.env.*.local
+.env.production
+.env.production.local
+.env.development
+.env.development.local
+
+# ======================
+# IDE / editors
+# ======================
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+*.code-workspace
+
+# ======================
+# OS generated
+# ======================
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+*.swp
+*.swo
+*.bak
+
+# ======================
+# Test / coverage
+# ======================
+coverage/
+*.lcov
+jest.config.js
+jest.setup.js
+
+# ======================
+# TypeScript
+# ======================
+*.tsbuildinfo
+
+# ======================
+# Storybook
+# ======================
+storybook-static/
+.out/
+.cache-storybook/
+
+# ======================
+# Tailwind / PostCSS
+# ======================
+*.css.map
+*.postcss.cache
+
+# ======================
+# Optional: Lint / Prettier
+# ======================
+.prettier.cache
+.eslintcache
+
+# ======================
+# Logs
+# ======================
+logs/
+*.log
