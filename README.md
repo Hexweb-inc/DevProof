@@ -1,75 +1,91 @@
-# React + TypeScript + Vite
+# DevProof — « Apprends, code, prouve tes skills. »
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**DevProof** est une plateforme open source pour aider les développeurs
+juniors et autodidactes à prouver leurs compétences en contribuant à des
+défis réels et en soumettant des PRs publiques.
 
-Currently, two official plugins are available:
+## Objectif
+Donner un environnement guidé et gamifié pour apprendre le workflow open
+source, travailler en équipe, et exposer des preuves concrètes (PR, issues,
+badges) sur un profil public.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## MVP
+- Auth GitHub
+- Dashboard listant les défis
+- Participation via PR GitHub
+- Points automatiques pour contributions validées
+- Profil public avec score & badges
+- Panel admin pour CRUD des défis
 
-## React Compiler
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+## Stack recommandée (MVP)
+- Frontend : React + Vite, TailwindCSS, shadcn/ui
+- Backend : Node.js + Express, Prisma, PostgreSQL
+- Auth : GitHub OAuth, JWT
+- CI/CD : GitHub Actions
+- Dev : Docker, Docker Compose
+## Structure du repo (résumé)
+``` bash
+/
+├─ README.md
+├─ CONTRIBUTING.md
+├─ .github/
+│  ├─ ISSUE_TEMPLATE/
+│  ├─ PULL_REQUEST_TEMPLATE.md
+│  ├─ workflows/ci.yml
+├─ apps/
+│  ├─ web/ → Frontend React + Vite
+│  └─ api/ → Backend Node + Express
+├─ infra/
+│  ├─ docker/
+│  └─ autres fichiers infra (compose, scripts)
+├─ prisma/ → Modélisation base de données
+└─ .env.example 
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## Installation locale (dev)
+Voir `infra/docker/README.md` pour la configuration Docker.
+## Comment contribuer
+1. Lire `CONTRIBUTING.md`.
+2. Chercher une issue `good first issue`.
+3. Forker le repo, créer une branche `feat/<votre-nom>-<task>`.
+4. Ouvrir une PR en respectant le template.
+## Roadmap rapide
+Phase 1 (MVP): Auth GitHub, dashboard, participation PR, scoring. (voir
+`ROADMAP.md`)
+## 📬 Contact
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+Pour toute question ou aide, vous pouvez :  
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+- Ouvrir une issue avec le label `question` sur GitHub.  
+- Nous contacter via **GitHub Discussions**.  
+- Rejoindre notre serveur **Discord** pour discuter en temps réel, poser vos questions, ou participer à la communauté :  
+  [👉 Rejoindre le Discord Hexweb](https://discord.gg/AhqwpuGpDT)  
+
+---
+
+## 🤝 Comment contribuer
+
+Pour participer au projet DevProof, suivez ces 4 étapes simples :
+
+1. **Lire le guide**  
+   Consultez le fichier [`CONTRIBUTING.md`](CONTRIBUTING.md) pour comprendre les règles et bonnes pratiques du projet.
+
+2. **Forker le dépôt**  
+   Créez votre propre copie du dépôt sur GitHub pour pouvoir travailler dessus.
+
+3. **Coder votre fonctionnalité ou corriger un bug**  
+   - Créez une branche dédiée :  
+     ```bash
+     git checkout -b feat/<votre-nom>-<tâche>
+     ```
+   - Développez votre fonctionnalité ou corrigez le problème.
+
+4. **Ouvrir une Pull Request (PR)**  
+   - Soumettez votre code via une PR en respectant le template fourni.  
+   - Attendez la revue de vos pairs et apportez les corrections si nécessaire.
+
+💡 Astuce : commencez par une issue **good first issue** pour vous familiariser avec le projet.
+
+
 ![License](https://img.shields.io/badge/license-DevProof--Business--License-blue)
-
