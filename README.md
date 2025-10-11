@@ -45,14 +45,10 @@ badges) sur un profil public.
 
 ## Installation locale (dev)
 Voir `infra/docker/README.md` pour la configuration Docker.
-## Comment contribuer
-1. Lire `CONTRIBUTING.md`.
-2. Chercher une issue `good first issue`.
-3. Forker le repo, créer une branche `feat/<votre-nom>-<task>`.
-4. Ouvrir une PR en respectant le template.
+
 ## Roadmap rapide
 Phase 1 (MVP): Auth GitHub, dashboard, participation PR, scoring. (voir
-`ROADMAP.md`)
+[`ROADMAP.md`](ROADMAP.md))
 ## 📬 Contact
 
 Pour toute question ou aide, vous pouvez :  
