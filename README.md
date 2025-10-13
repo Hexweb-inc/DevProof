@@ -85,3 +85,9 @@ Pour participer au projet DevProof, suivez ces 4 étapes simples :
 
 
 ![License](https://img.shields.io/badge/license-DevProof--Business--License-blue)
+
+## 💪 Contributeurs
+
+Merci à toutes les personnes qui participent au projet 💜  
+
+[![Contributors](https://img.shields.io/github/contributors/HexwebAgency/devproof?style=for-the-badge)](https://github.com/HexwebAgency/devproof/graphs/contributors)
