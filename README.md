@@ -1,93 +1,139 @@
-# DevProof — « Apprends, code, prouve tes skills. »
+# 💡 DevProof — Apprends, code, prouve tes skills
 
-**DevProof** est une plateforme open source pour aider les développeurs
-juniors et autodidactes à prouver leurs compétences en contribuant à des
-défis réels et en soumettant des PRs publiques.
+**DevProof** est **la plateforme open source ultime** pour les développeurs juniors et autodidactes qui veulent **montrer leurs compétences concrètement** : relever des défis réels, collaborer sur GitHub et créer un profil public qui prouve ce qu’ils savent faire.
 
-## Objectif
-Donner un environnement guidé et gamifié pour apprendre le workflow open
-source, travailler en équipe, et exposer des preuves concrètes (PR, issues,
-badges) sur un profil public.
+---
 
-## MVP
-- Auth GitHub
-- Dashboard listant les défis
-- Participation via PR GitHub
-- Points automatiques pour contributions validées
-- Profil public avec score & badges
-- Panel admin pour CRUD des défis
+## 🎯 Pourquoi DevProof ?
 
+Vous avez des projets personnels mais vous ne savez pas comment les valoriser ?  
+Vous voulez que vos compétences soient visibles par des recruteurs, mentors ou clients ?  
 
-## Stack recommandée (MVP)
-- Frontend : React + Vite, TailwindCSS, shadcn/ui
-- Backend : Node.js + Express, Prisma, PostgreSQL
-- Auth : GitHub OAuth, JWT
-- CI/CD : GitHub Actions
-- Dev : Docker, Docker Compose
-## Structure du repo (résumé)
-``` bash
+DevProof est conçu pour vous :  
+
+- 🔹 **Relever des défis techniques réels** issus de vrais projets open source  
+- 🔹 **Soumettre vos solutions via PR GitHub** et obtenir des validations  
+- 🔹 **Gagner des points et badges** pour chaque contribution validée  
+- 🔹 **Afficher vos compétences sur un profil public**, consultable par tous  
+- 🔹 **Rejoindre une communauté de développeurs motivés** pour progresser ensemble
+
+> DevProof transforme votre apprentissage en preuves concrètes et visibles.  
+
+---
+
+## 🧱 MVP — Fonctionnalités clés
+
+- 🔑 Authentification via **GitHub OAuth**  
+- 📋 **Dashboard** listant tous les défis disponibles  
+- 💻 Participation aux défis via **Pull Requests GitHub**  
+- ⭐ Attribution automatique de **points et badges** pour vos contributions  
+- 🏅 **Profil public** avec score et badges  
+- 🛠 **Panel admin** pour créer, modifier et gérer les défis  
+
+---
+
+## ⚙️ Stack technique recommandée
+
+| Côté | Tech | Description |
+|------|------|-------------|
+| Frontend | React + Vite, TailwindCSS, shadcn/ui | Interface moderne et réactive |
+| Backend | Node.js + Express, Prisma, PostgreSQL | API REST robuste et scalable |
+| Auth | GitHub OAuth + JWT | Sécurisation des accès |
+| DevOps | Docker, Docker Compose | Environnement unifié pour tous |
+| CI/CD | GitHub Actions | Tests, lint et déploiement automatique |
+
+---
+
+## 🏗 Structure du projet
+
+```bash
 /
 ├─ README.md
 ├─ CONTRIBUTING.md
 ├─ .github/
 │  ├─ ISSUE_TEMPLATE/
 │  ├─ PULL_REQUEST_TEMPLATE.md
-│  ├─ workflows/ci.yml
+│  └─ workflows/ci.yml
 ├─ apps/
 │  ├─ web/ → Frontend React + Vite
 │  └─ api/ → Backend Node + Express
 ├─ infra/
 │  ├─ docker/
-│  └─ autres fichiers infra (compose, scripts)
+│  └─ scripts et fichiers d`infra
 ├─ prisma/ → Modélisation base de données
-└─ .env.example 
+└─ .env.example
 ```
 
-## Installation locale (dev)
-Voir `infra/docker/README.md` pour la configuration Docker.
 
-## Roadmap rapide
-Phase 1 (MVP): Auth GitHub, dashboard, participation PR, scoring. (voir
-[`ROADMAP.md`](ROADMAP.md))
-## 📬 Contact
+## 🖥 Installation locale (dev)
 
-Pour toute question ou aide, vous pouvez :  
+Pour lancer **DevProof** en local :  
 
-- Ouvrir une issue avec le label `question` sur GitHub.  
-- Nous contacter via **GitHub Discussions**.  
-- Rejoindre notre serveur **Discord** pour discuter en temps réel, poser vos questions, ou participer à la communauté :  
-  [👉 Rejoindre le Discord Hexweb](https://discord.gg/AhqwpuGpDT)  
+1. Cloner le dépôt et installer Docker  
+2. Suivre le guide complet dans :  
+   [`infra/docker/README.md`](infra/docker/README.md)  
+
+> Tout est prêt pour que vous puissiez commencer à coder en quelques minutes !
+
+---
+
+## 🚀 Roadmap rapide
+
+| Phase | Contenu | Statut |
+|-------|---------|--------|
+| Phase 1 — MVP | Auth GitHub, dashboard, PR, scoring | 🟢 En cours |
+| Phase 2 — Profil & badges | Profil public + badges automatiques | ⚪ À venir |
+| Phase 3 — Gamification avancée | Leaderboard, niveaux, missions | ⚪ À venir |
+| Phase 4 — API & intégrations | API publique pour stats et outils externes | ⚪ À venir |
 
 ---
 
 ## 🤝 Comment contribuer
 
-Pour participer au projet DevProof, suivez ces 4 étapes simples :
+Pour participer au projet **DevProof**, suivez ces 4 étapes simples :  
 
 1. **Lire le guide**  
-   Consultez le fichier [`CONTRIBUTING.md`](CONTRIBUTING.md) pour comprendre les règles et bonnes pratiques du projet.
+   Consultez [`CONTRIBUTING.md`](CONTRIBUTING.md) pour comprendre les règles et bonnes pratiques.
 
 2. **Forker le dépôt**  
-   Créez votre propre copie du dépôt sur GitHub pour pouvoir travailler dessus.
+   Créez votre copie personnelle du projet pour y travailler.
 
 3. **Coder votre fonctionnalité ou corriger un bug**  
-   - Créez une branche dédiée :  
-     ```bash
-     git checkout -b feat/<votre-nom>-<tâche>
-     ```
-   - Développez votre fonctionnalité ou corrigez le problème.
+   ```bash
+   git checkout -b feat/<votre-nom>-<tâche>
 
-4. **Ouvrir une Pull Request (PR)**  
-   - Soumettez votre code via une PR en respectant le template fourni.  
-   - Attendez la revue de vos pairs et apportez les corrections si nécessaire.
+## 🔄 Ouvrir une Pull Request (PR)
+
+Soumettez vos modifications en respectant le template fourni et attendez la revue de vos pairs.
 
 💡 Astuce : commencez par une issue **good first issue** pour vous familiariser avec le projet.
 
+---
 
-![License](https://img.shields.io/badge/license-DevProof--Business--License-blue)
+## 📬 Contact
+
+Pour toute question ou aide :  
+
+- 🐛 Ouvrir une issue `question` sur GitHub  
+- 💬 Participer aux **GitHub Discussions**  
+- 🎧 Rejoindre notre serveur **Discord DevProof** pour discuter en direct et échanger avec la communauté :  
+  [👉 Rejoindre le Discord Hexweb](https://discord.gg/AhqwpuGpDT)
+
+---
 
 ## 💪 Contributeurs
 
 Merci à toutes les personnes qui participent au projet 💜  
 
 [![Contributors](https://img.shields.io/github/contributors/HexwebAgency/devproof?style=for-the-badge)](https://github.com/HexwebAgency/devproof/graphs/contributors)
+
+---
+
+## 🧠 Pourquoi contribuer ?
+
+- Apprenez à travailler sur une **stack fullstack moderne**  
+- Collaborez sur de **vrais projets open source**  
+- Améliorez vos compétences **GitHub, PRs et workflow CI/CD**  
+- Gagnez des **badges et preuves visibles** pour votre portfolio  
+
+> DevProof, c’est plus qu’un projet, c’est **votre vitrine tech**.
