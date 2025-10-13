@@ -8,4 +8,4 @@ RUN npm install
 COPY . .
 
 EXPOSE 4000
-CMD ["npx", "ts-node-dev", "src/index.ts"]
+CMD ["npx", "ts-node-dev", "src/index.ts", "--respawn", "--transpile-only"]

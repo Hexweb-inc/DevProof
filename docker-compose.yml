@@ -31,6 +31,7 @@ services:
       - ./frontend:/src
       - /src/node_modules
     environment:
+      - HOST=0.0.0.0
       - CHOKIDAR_USEPOLLING=true
 
 volumes:
