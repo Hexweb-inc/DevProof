@@ -5,7 +5,7 @@ WORKDIR /app
 COPY package*.json ./
 RUN npm install
 
-COPY . .
+## COPY . .
 
 EXPOSE 4000
 CMD ["npx", "ts-node-dev", "src/index.ts", "--respawn", "--transpile-only"]

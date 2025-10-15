@@ -1,0 +1,12 @@
+name: Block PRs to main
+on:
+  pull_request:
+    branches: [ main ]
+jobs:
+  block:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Block PR to main
+        run: |
+          echo "❌ Pull requests to main are not allowed. Please change the base branch to 'develop' or another appropriate branch."
+          exit 1
