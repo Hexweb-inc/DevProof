@@ -1,0 +1,28 @@
+name:  Bug
+description: File a bug/issue
+title: "[Bug]: "
+labels: ["Bug"]
+body:
+- type: checkboxes
+  attributes:
+    label: Is there an existing issue for this?
+    description: Please search to see if an issue already exists for the bug you encountered.
+    options:
+    - label: I have searched the existing issues
+      required: true
+- type: textarea
+  attributes:
+    label: Current Behavior
+    description: A concise description of what you're experiencing.
+  validations:
+    required: true
+- type: textarea
+  attributes:
+    label: Steps To Reproduce
+  validations:
+    required: false
+- type: textarea
+  attributes:
+    label: Relevant log output
+    description: Please copy and paste any relevant log output. This will be automatically formatted into code, so no need for backticks.
+    render: shell
