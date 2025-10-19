@@ -1,1 +1,38 @@
 @import "tailwindcss";
+/* Style global pour le body */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f0f2f5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Conteneur principal */
+.app-container {
+  text-align: center;
+}
+
+/* Titre */
+.app-container h1 {
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Bouton GitHub */
+.github-login-button {
+  padding: 10px 20px;
+  background-color: #24292e;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+.github-login-button:hover {
+  background-color: #444;
+}
